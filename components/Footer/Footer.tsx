@@ -10,12 +10,12 @@ export default function Footer() {
 
                 {/* Status: Changed zinc-700 (too dark) to zinc-500 */}
                 <p className="text-[10px] tracking-[0.3em] text-zinc-500 uppercase font-bold text-center md:text-left">
-                    No ego: <span className={statusColor}>Just skill-to-build</span>
+                    No ego: <span className={statusColor}>PERFORMANCE MATTERS</span>
                 </p>
 
                 {/* Copyright: Increased brightness and slightly larger text for mobile readability */}
                 <p className="text-[10px] tracking-[0.25em] text-zinc-500 uppercase text-center md:text-right">
-                    © {new Date().getFullYear()} <span className="text-zinc-400">Lizard Interactive Online</span>
+                    © {new Date().getFullYear()} <span className="text-zinc-400">YOUR WEBSITE NAME</span>
                 </p>
 
             </div>
