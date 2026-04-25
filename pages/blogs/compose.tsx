@@ -167,7 +167,7 @@ export default function ComposeBlogPage() {
                             </button>
                             {/* Link to the client-side draft preview page */}
                             <Link
-                                href="/admin/blog/draft"
+                                href="/blogs/draft"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all text-zinc-500 hover:text-white">
