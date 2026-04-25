@@ -1,10 +1,10 @@
 'use client'
 
 import MetaHead from "@/components/MetaHead/MetaHead";
-import { ScreenContainer } from "@/components/shared";
 import { homeContent } from "@/data/page/homeContent";
-import BlogContent from "@/components/BlogContent/BlogContent";
 import { blogArticles } from "@/data/lists/blogArticle";
+import BlogContent from "@/components/shared/BlogContent/BlogContent";
+import ScreenContainer from "@/components/shared/ScreenContainer/ScreenContainer";
 
 
 export default function HomePage() {

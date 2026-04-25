@@ -14,7 +14,7 @@ export default function NavBar() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
 
-    // Lock scroll when menu or transition is active
+
     useEffect(() => {
         document.body.style.overflow = (mobileOpen || isTransitioning) ? "hidden" : "";
         return () => { document.body.style.overflow = ""; };
@@ -28,34 +28,31 @@ export default function NavBar() {
 
         e.preventDefault();
 
-        // Start the transition sequence
+
         setIsTransitioning(true);
         setMobileOpen(false);
 
-        // Trigger the page change
+
         router.push(href);
 
-        // Keep the overlay visible for 600ms to mask the page swap
+
         setTimeout(() => {
             setIsTransitioning(false);
         }, 600);
     };
 
-    const brandName = "LIZARD INTERACTIVE ONLINE";
+    const brandName = "WELCOME TO MY SITE";
 
     return (
         <>
             <header className="fixed top-0 left-0 right-0 h-[72px] md:h-[65px] z-[100] bg-black/80 backdrop-blur-xl border-b border-white/4 text-white">
                 <nav className="flex items-center justify-between w-full max-w-7xl mx-auto px-6 h-full relative">
                     <Link href="/" className="flex items-center gap-2">
-                        <Image
-                            src="/lizardinteractive.png"
-                            alt="Logo"
-                            width={30}
-                            height={30}
-                            className="rounded-full "
-                            priority
-                        />
+                        <span
+                            className={`text-sm font-medium transition-colors uppercase ${pathname === "/" ? "text-emerald-500" : "text-emerald-500/70 hover:text-emerald-500/30"}`}
+                        >
+                            LOGO
+                        </span>
                         <span className="font-bold tracking-tight text-emerald-500 hover:text-emerald-500/30" >{brandName}</span>
                     </Link>
 
@@ -86,8 +83,8 @@ export default function NavBar() {
             {/* Mobile Overlay */}
             <div
                 className={`fixed inset-0 z-[90] bg-black md:hidden transition-opacity duration-500 ease-in-out ${mobileOpen || isTransitioning
-                        ? "opacity-100 pointer-events-auto"
-                        : "opacity-0 pointer-events-none"
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 pointer-events-none"
                     }`}
             >
                 <div className="flex flex-col items-center justify-center h-full gap-10">
